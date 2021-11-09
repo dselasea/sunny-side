@@ -239,6 +239,12 @@ section {
   align-items: flex-end;
 }
 
+.transform-section .design {
+  display: flex;
+  flex-direction: row;
+}
+
+
 .transform-section .graphic {
   background-image: url(./images/mobile/image-graphic-design.jpg);
   
@@ -248,11 +254,26 @@ section {
   background-image: url(./images/mobile/image-photography.jpg);
 }
 
-.transform-section .graphic p, .transform-section .photo p {
+.transform-section .graphic h2 {
+  color: var( --dark-blue);
+}
 
+.transform-section .graphic p {
+  color: var( --dark-blue);
+}
+
+.transform-section .photo h2 {
+  color: var( --dark-desaturated-cyan);
+}
+
+.transform-section .photo p {
+  color: var( --dark-desaturated-cyan);
 }
 
 /* Testimonials Section */
+.testimonial {
+  padding: 4rem 0;
+}
 .client-testimonials h2 {
   font-size: 1rem;
   color: var(--grayish-blue);
@@ -297,19 +318,65 @@ section {
 }
 
 .milk {
-  background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+  background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
 }
 .orange {
-  background-image: url(./images/mobile/image-gallery-orange.jpg);
+  background-image: url(./images/desktop/image-gallery-orange.jpg);
 }
 .cone {
-  background-image: url(./images/mobile/image-gallery-cone.jpg);
+  background-image: url(./images/desktop/image-gallery-cone.jpg);
 }
 .pattern {
-  background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+  background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
 }
 /* End of pics section */
 
+/* footer */
+  footer {
+    background-color: var( --dark-moderate-cyan);
+    padding: 4rem 0;
+  }
+
+  footer div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+   footer .footer__links a{
+     display: inline-block;
+     text-decoration: none; 
+     padding: 0 2rem;
+     color: var(--dark-desaturated-cyan);
+     transition: all .3s linear;
+   }
+
+   footer .footer__links a:hover {
+     color: var(--white);
+   }
+
+  footer .footer__links, footer .footer__social {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .footer__social img {
+    padding: 1rem;
+    cursor: pointer;
+    fill: #fff;
+  }
+
+  .footer__social img:hover {
+    fill: white;
+  }
+
+  footer div h2{
+    color:var(--very-dark-desaturated-blue);
+  }
+/* end of footer */
 
 /* Desktop Styles */
 @media (min-width: 500px) {
@@ -397,7 +464,8 @@ p {
   }
 
   .nav .contact--btn:hover {
-    background-color: var(--grayish-blue);
+    background-color: rgba(255, 255, 255, 0.4);
+    color: white;
   }
 
   /* Section Transform Desktop */
