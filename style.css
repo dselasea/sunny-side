@@ -281,8 +281,43 @@ section {
   color: var(--grayish-blue); 
 }
 
+/* End of testimonials */
+
+/* Pics Section */
+.pics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.milk, .orange, .cone, .pattern {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+.milk {
+  background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+}
+.orange {
+  background-image: url(./images/mobile/image-gallery-orange.jpg);
+}
+.cone {
+  background-image: url(./images/mobile/image-gallery-cone.jpg);
+}
+.pattern {
+  background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+}
+/* End of pics section */
+
 
 /* Desktop Styles */
+@media (min-width: 500px) {
+    .milk, .orange, .cone, .pattern {
+  height:var(--height-mobile);
+}
+}
+
 @media (min-width: 783px) {
   h1 {
     font-size: 2.5rem;
@@ -412,4 +447,14 @@ p {
     margin: 0 auto;
     width: 80%;
   }
+
+  /* pics section */
+  .milk, .orange, .cone, .pattern {
+  height: var(--height-desktop);
+}
+  .pics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+  /* end of pics section */
 }
